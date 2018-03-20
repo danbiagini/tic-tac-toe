@@ -1,16 +1,13 @@
 import React from 'react';
 
 import {  ProgressBar, Image } from 'react-bootstrap';
-import julietSq from './squares/20170531_juliet-author.png'
-import vjbSq from './squares/vjb-headshot.png'
-
 
 function Square(props) {
   var val = props.value;
-  if (props.value === 'X') {
-    val = <Image responsive alt="juliet" src={julietSq}/>
-  } else if (props.value === 'O') {
-    val = <Image responsive alt="vince" src={vjbSq}/>
+  if (props.value === props.p1.name) {
+    val = <Image responsive alt={props.p1.name} src={props.p1.thumb}/>
+  } else if (props.value === props.p2.name) {
+    val = <Image responsive alt={props.p2.name} src={props.p2.thumb}/>
   }
 
   return (
@@ -25,6 +22,8 @@ class Board extends React.Component {
     return (
       <Square
         value={this.props.squares[i]}
+        p1={this.props.p1}
+        p2={this.props.p2}
         onClick={() => this.props.onClick(i)}
       />
     );

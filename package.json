@@ -5,7 +5,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "react": "^15.6.1",
-    "react-bootstrap": "^0.31.2",
+    "react-bootstrap": "file:///Users/dbiagini/workspace/react-bootstrap",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
@@ -20,5 +20,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -e tic-tac-toe -b tic-tac-bootstrapping -d build -r git@github.com:danbiagini/danbiagini.github.io.git"
   },
-  "homepage": "http://danbiagini.github.io/tic-tac-toe"
+  "homepage": "http://danbiagini.github.io/tic-tac-toe",
+  "released_react_bootstrap": "^0.31.2"
 }
